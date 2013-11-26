@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TrackingObserver: Automated Measurement</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+                font-family: 'Open Sans', sans-serif;
+	}
+	#error {
+		color: red;
+        text-align: center;
+	}
+    #success {
+		color: green;
+        text-align: center;
+	}
+    #config {
+        margin-left:auto;
+        margin-right:auto;
+        width: 400px;
+        padding: 20px 20px 20px 20px;
+        border: 2px solid #000000;
+        background-color:#c2c2c2;
+    }
+    </style>
+    <script src="Measure.js"></script>
+  </head>
+
+<body>
+<h1>TrackingObserver: Automated Measurement</h1>
+
+You can use TrackingObserver to run an automated measurement of tracking on the Web.
+Designate a file containing a list of URLs to visit (one on each line), and TrackingObserver
+will open a new tab and automatically visit each URL in turn. 
+<br><br>
+You can specify how long you'd like each page
+to stay open, giving sufficient time for trackers to load on the page.
+If you'd like to stop mid-measurement, simply close the tab in which TrackingObserver is
+automatically loading pages.
+<br><br>
+Please note that starting a measurement will clear all stored tracking data.
+
+<br><br>
+<div id="config">
+
+<input type="file" id="files" name="file" />
+
+
+<br><br>
+Number of seconds to remain on a page (default is 10):
+<br>
+<input type="number" id="seconds" name="seconds" min="1"/>
+
+<br><br>
+Number of links to visit on each page in the URL list (default is 0):
+<br>
+<input type="number" id="links" name="links" min="0"/>
+
+<br><br>
+<button type="button" id="run">Run automated measurement!</button>
+
+</div>
+
+<br>
+<div id="error"></div>
+<div id="success"></div>
+
+</body>
+
+</html>
+
